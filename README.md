@@ -1,5 +1,14 @@
-# 工具库
-## 要求
-JDK 8 或以上版本
-## 涵盖内容
-随机工具类
+# Util
+## Requirements
+- JDK 8 or higher
+## Content
+- RandomUtil
+
+## Usage in maven
+```xml 
+<dependency>
+    <groupId>com.imdsc</groupId>
+    <artifactId>util</artifactId>
+    <version>1.0.0.RELEASE</version>
+</dependency>
+```
