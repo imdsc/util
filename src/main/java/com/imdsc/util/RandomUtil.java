@@ -3,10 +3,9 @@ package com.imdsc.util;
 import java.util.SplittableRandom;
 
 /**
- * 随机工具类
+ * Random Util
  * @author Zhuang Wei Yi
- * @since 2020/11/04 13:58
- * @since 1.0-SNAPSHOT
+ * @since 1.0.0.RELEASE
  */
 public class RandomUtil {
 
@@ -19,26 +18,26 @@ public class RandomUtil {
     public static final int[][] TYPE_ARR = {UPPER_CASE_ASCII, LOWER_CASE_ASCII, NUMBER_ASCII};
 
     /**
-     * 生成指定长度的随机字符串
-     * @param length 随机字符串的长度
-     * @return 随机字符串
-     * @throws IllegalArgumentException length必须是正整数
-     * @since 1.0-SNAPSHOT
+     * generate random string
+     * @param length the length of random string
+     * @return random string
+     * @throws IllegalArgumentException length must be positive
+     * @since 1.0.0.RELEASE
      */
     public static String generateRandomStrings(int length) throws IllegalArgumentException {
         if (length <= 0) {
-            throw new IllegalArgumentException("length 必须是正整数");
+            throw new IllegalArgumentException("length must be positive");
         }
 
         String randomStrings = "";
 
         for (int i = 0; i < length; i++) {
             SplittableRandom random = new SplittableRandom();
-            // 某一个类型
+            // some type
             int type = random.nextInt(0, TYPE_ARR.length);
             int[] asciiArr = TYPE_ARR[type];
 
-            // 某一个字符
+            // some char
             int arrLength = asciiArr.length;
             int arrIndex = random.nextInt(0, arrLength);
             char c = (char) asciiArr[arrIndex];
